@@ -9,7 +9,7 @@ export const routes: Routes = [{
     path:'mobile',
     component: MobileandTabViewComponent
 },{
-    path: ' ', redirectTo: 'mobile',
+    path: '', redirectTo: 'mobile',
     pathMatch: 'full',
 },{
     path: 'laptop',
