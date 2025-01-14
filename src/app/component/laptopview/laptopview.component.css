@@ -1,0 +1,8 @@
+:host ::ng-deep .p-tablist-tab-list {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #5ca2a6;
+    font-size: x-large;
+    
+    
+}
