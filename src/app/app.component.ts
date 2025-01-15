@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { MobileandTabViewComponent } from './component/mobileand-tab-view/mobileand-tab-view.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
