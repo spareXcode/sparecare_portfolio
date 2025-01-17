@@ -25,102 +25,102 @@ export class MobileandTabViewComponent {
   }
 
   twowheeler: any = [
-    {'image': 'triumph.png',
+    {'image': 'triumph.avif',
       'name': 'Triumph'
     },
-    {'image': 'tvs.png',
+    {'image': 'tvs.avif',
       'name': 'TVS'
     },
-    {'image': 'suzuki.png',
+    {'image': 'suzuki.avif',
       'name': 'Suzuki'
     },
-    {'image': 'royalenfield.png',
+    {'image': 'royalenfield.avif',
       'name': 'Royal Enfield'
     },
-    {'image': 'bajaj.png',
+    {'image': 'bajaj.avif',
       'name': 'Bajaj'
     },
-    {'image': 'hero.png',
+    {'image': 'hero.avif',
       'name': 'Hero'
     },
-    {'image': 'honda.png',
+    {'image': 'honda.avif',
       'name': 'Honda'
     },
-    {'image': 'ktm.png',
+    {'image': 'ktm.avif',
       'name': 'KTM'
     },
   ];
   fourWheeler: any= [
-    {'image': 'nissan.png',
+    {'image': 'nissan.avif',
       'name': 'Nissan'
     },
-    {'image': 'volkswegan.png',
-      'name': 'Volkswegen'
+    {'image': 'volkswegan.avif',
+      'name': 'Volkswagen'
     },
-    {'image': 'honda4w.png',
+    {'image': 'honda4w.avif',
       'name': 'Honda'
     },
-    {'image': 'skoda.png',
+    {'image': 'skoda.avif',
       'name': 'Skoda'
     },
-    {'image': 'renault.png',
+    {'image': 'renault.avif',
       'name': 'Renault'
     },
-    {'image': 'mahindranew.png',
+    {'image': 'mahindranew.avif',
       'name': 'Mahindra'
     },
-    {'image': 'mercedes.png',
+    {'image': 'mercedes.avif',
       'name': 'Mercedes'
     },
-    {'image': 'suzuki.png',
+    {'image': 'suzuki.avif',
       'name': 'Maruti Suzuki'
     },
-    {'image': 'Jeep.png',
+    {'image': 'Jeep.avif',
       'name': 'Jeep'
     },
-    {'image': 'bmw.png',
+    {'image': 'bmw.avif',
       'name': 'BMW'
     },
-    {'image': 'kia.png',
+    {'image': 'kia.avif',
       'name': 'KIA'
     },
-    {'image': 'mg.png',
-      'name': 'MG'
+    {'image': 'mg.avif',
+      'name': 'Morris Garages'
     },
-    {'image': 'tatamotor.png',
+    {'image': 'tatamotor.avif',
       'name': 'Tata'
     },
-    {'image': 'baratbenz.png',
+    {'image': 'baratbenz.avif',
       'name': 'Bharat Benz'
     },
 
   ];
   
   commercial: any = [
-    {'image': 'force.png',
+    {'image': 'force.avif',
       'name': 'Force'
     },
-    {'image': 'tatamotor.png',
+    {'image': 'tatamotor.avif',
       'name': 'Tata Motors'
     },
-    {'image': 'ashokleyland.png',
+    {'image': 'ashokleyland.avif',
       'name': 'Ashok Leyland'
     },
-    {'image': 'eicher.png',
+    {'image': 'eicher.avif',
       'name': 'Eicher'
     },
-    {'image': 'escort1.png',
+    {'image': 'escort1.avif',
       'name': 'Escort'
     },
-    {'image': 'mahindra.png',
+    {'image': 'mahindra.avif',
       'name': 'Mahindra'
     },
   ];
   construction: any = [
-    {'image': 'jcb.png',
+    {'image': 'jcb.avif',
       'name': 'JCB'
     },
-    {'image': 'escort1.png',
+    {'image': 'escort1.avif',
       'name': 'Escort'
     },
   ]

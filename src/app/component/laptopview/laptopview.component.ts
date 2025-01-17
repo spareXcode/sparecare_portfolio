@@ -1,113 +1,114 @@
 import { Component } from '@angular/core';
 import { TabsModule } from 'primeng/tabs';
 import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-laptopview',
-  imports: [ButtonModule, TabsModule],
+  imports: [ButtonModule, TabsModule,CommonModule, RouterOutlet],
   templateUrl: './laptopview.component.html',
   styleUrl: './laptopview.component.css'
 })
 export class LaptopviewComponent {
   twowheeler: any = [
-    {'image': '',
-      'name': 'Triumph'
+    {'image': 'honda.avif',
+      'name': 'Honda 2W'
     },
-    {'image': '',
+    {'image': 'tvs.avif',
       'name': 'TVS'
     },
-    {'image': '',
-      'name': 'Suzuki'
-    },
-    {'image': '',
-      'name': 'Royal Enfield'
-    },
-    {'image': '',
-      'name': 'Bajaj'
-    },
-    {'image': '',
+    {'image': 'hero.avif',
       'name': 'Hero'
     },
-    {'image': '',
-      'name': 'Honda'
+    {'image': 'bajaj.avif',
+      'name': 'Bajaj'
     },
-    {'image': '',
+    {'image': 'royalenfield.avif',
+      'name': 'Royal Enfield'
+    },
+    {'image': 'suzuki.avif',
+      'name': 'Suzuki 2W'
+    },
+    {'image': 'ktm.avif',
       'name': 'KTM'
+    },
+    {'image': 'triumph.avif',
+      'name': 'Triumph Motorcycles'
     },
   ];
   fourWheeler: any= [
-    {'image': '',
-      'name': 'Nissan'
-    },
-    {'image': '',
-      'name': 'Volkswegen'
-    },
-    {'image': '',
-      'name': 'Honda'
-    },
-    {'image': '',
-      'name': 'Skoda'
-    },
-    {'image': '',
-      'name': 'Renault'
-    },
-    {'image': '',
+    
+    {'image': 'mahindranew.avif',
       'name': 'Mahindra'
     },
-    {'image': '',
-      'name': 'Mercedese'
+    {'image': 'tatamotor.avif',
+      'name': 'TATA PCBU'
     },
-    {'image': '',
-      'name': 'Maruti Suzuki'
-    },
-    {'image': '',
-      'name': 'Jeep'
-    },
-    {'image': '',
-      'name': 'BMW'
-    },
-    {'image': '',
+    {'image': 'kia.avif',
       'name': 'KIA'
     },
-    {'image': '',
-      'name': 'MG'
+    {'image': 'suzuki.avif',
+      'name': 'Maruti Suzuki'
     },
-    {'image': '',
-      'name': 'Tata'
+    {'image': 'mg.avif',
+      'name': 'Morris Garages'
     },
-    {'image': '',
-      'name': 'Bharat Benz'
+    {'image': 'skoda.avif',
+      'name': 'Skoda'
     },
+    {'image': 'volkswegan.avif',
+      'name': 'Volkswagen'
+    },
+    {'image': 'Jeep.avif',
+      'name': 'JEEP'
+    },
+    {'image': 'renault.avif',
+      'name': 'Renault'
+    },
+    {'image': 'honda4w.avif',
+      'name': 'Honda 4W'
+    }
 
   ];
   
   commercial: any = [
-    {'image': '',
-      'name': 'Force'
+    
+    {'image': 'tatamotor.avif',
+      'name': 'TATA CVBU'
     },
-    {'image': '',
-      'name': 'Tata Motors'
+    {'image': 'baratbenz.avif',
+      'name': 'Bharat Benz,'
     },
-    {'image': '',
+    {'image': 'ashokleyland.avif',
       'name': 'Ashok Leyland'
     },
-    {'image': '',
-      'name': 'Eicher'
+    {'image': 'eicher.avif',
+      'name': 'Volvo Eicher'
     },
-    {'image': '',
+    {'image': 'escort1.avif',
       'name': 'Escort'
-    },
-    {'image': '',
-      'name': 'Mahindra'
-    },
+    }
   ];
   construction: any = [
-    {'image': '',
+    {'image': 'jcb.avif',
       'name': 'JCB'
     },
-    {'image': '',
+    {'image': 'escort1.avif',
       'name': 'Escort'
     },
+    {'image': 'mahindra.avif',
+      'name': 'Mahindra Tractor'
+    },
   ]
+  constructor(private router:Router){
 
+  }
+
+  valueOffering(brandName:any){
+    console.log(brandName)
+  this.router.navigate(['/lb'],{
+    queryParams:{brand:brandName}
+  })
+  }
 }

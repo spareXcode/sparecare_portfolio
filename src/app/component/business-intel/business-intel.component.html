@@ -1,106 +1,275 @@
-<div class="w-[100vw] h-[10vh] sm:h-[10vh] lg:h-16   bg-customblue flex justify-center " routerLinkActive="router-link-active" >
-  
-  <a routerLink='/mobile'>
-    <img 
-      src="1.png" 
-      class="pb-2 sm:py-1 w-60 h-24 sm:h-28 text-white y-1 lg:py-1" 
+<div
+  class="w-[100vw] h-[10vh] sm:h-[10vh] lg:h-16 bg-customblue flex justify-center"
+  routerLinkActive="router-link-active"
+>
+  <div
+    class="w-[100vw] h-[100vh] fixed background-img  -z-10"
+    style="background-image: url('background.svg'); background-size: cover"
+  ></div>
+
+  <a routerLink="/mobile">
+    <img
+      src="1.png"
+      class="pb-2 sm:py-1 w-60 h-24 sm:h-28 text-white y-1 lg:py-1"
       alt="sparecarelogo"
       (click)="navigateToRoute()"
     />
-  </a>  
-</div>
-<div class="w-[100vw] h-[100vh] background-img absolute -z-10" style="background-image: url('background.svg'); background-size: cover;">
+  </a>
 </div>
 
 <div class="w-[100vw] flex">
-  <p-button class="!mt-5 !ml-5 !sm:ml-10"  label="Back" icon="pi pi-arrow-left"  [raised]="true" (onClick)="goBack()" />
-
+  <p-button
+    class="!mt-5 !ml-5 !sm:ml-10"
+    label="Back"
+    icon="pi pi-arrow-left"
+    [raised]="true"
+    (onClick)="goBack()"
+  />
 </div>
 
 <div class="flex justify-center mt-11 flex-wrap gap-10">
   <div class="flex justify-center">
+    <div
+      #parentDiv1
+      class="card w-[90vw] lg:w-[45vw] p-3 lg:h-auto bg-customgreen rounded-lg shadow-lg"
+    >
+      <!-- Parent Card Content -->
       <div
-        #parentDiv1
-        class="card w-[90vw] lg:w-[45vw] p-3 lg:h-auto bg-customgreen rounded-lg shadow-lg"
+        class="w-full flex py-1 justify- items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
+        (click)="toggleDropdown('businessintellegence')"
       >
-        <!-- Parent Card Content -->
-        <div
-          class="w-full flex py-1 justify- items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
-          (click)="toggleDropdown('businessintellegence')"
+        <img
+          src="businessintel.avif"
+          class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24"
+          alt=""
+        />
+        <h1
+          class="text-3xl sm:text-5xl lg:text-3xl text-wrap ml-[50px] font-semibold text-white"
         >
-          <img src="businessintel.png" class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
-          <h1 class="text-3xl sm:text-5xl lg:text-3xl text-wrap ml-[50px] font-semibold text-white">Business Intellegence</h1>
+          Business Intellegence
+        </h1>
+      </div>
+
+      <!-- Dropdown Content -->
+      <div
+        *ngIf="showDropdown === 'businessintellegence'"
+        class="mt-3 space-y-2"
+      >
+        <a
+          class="mb-2"
+          href="https://app.powerbi.com/view?r=eyJrIjoiZDI2ZTA0ZTEtMjhkOC00ZTc0LTgyZTItZTg3ZTQ2YjIzNTYzIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-16 lg:h-16"
+              alt=""
+            />
+            <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">Benchmark</h2>
+          </div>
+        </a>
+        <a
+          href="https://app.powerbi.com/view?r=eyJrIjoiYmEwMTM3OWItODIxZS00ZDA4LWJjZWMtOTJkOTM4ZTY4YjE4IiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="p-3 mb-2 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24"
+              alt=""
+            />
+            <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">CID</h2>
+          </div>
+        </a>
+        <a
+          href="https://app.powerbi.com/view?r=eyJrIjoiNDIwZTk0ZGItY2IzZC00OWE5LTg5ZDctNTdkYzI4NjVkNjE3IiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="p-3 mb-2 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24"
+              alt=""
+            />
+            <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">PPNI</h2>
+          </div>
+        </a>
+
+        <a
+          href="https://app.powerbi.com/view?r=eyJrIjoiYWRhNGQ0ODAtMzA4NC00YTcxLTk4ZGQtODc0YWQ2YTI2ZWViIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24"
+              alt=""
+            />
+            <h2 class="text-xl ml-20 sm:ml-44 sm:text-3xl">TOP vs SCS</h2>
+          </div>
+        </a>
+        <a
+          href="https://app.powerbi.com/view?r=eyJrIjoiMGYyZjA2N2MtYTEzNC00NDZkLWI1ZWUtMDNiNmQyYjQzOWI1IiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24"
+              alt=""
+            />
+            <h2 class="text-xl ml-20 sm:ml-44 sm:text-3xl">Special List</h2>
+          </div>
+        </a>
+        <a
+          href="https://app.powerbi.com/view?r=eyJrIjoiZjA3ODk2YjktZDE1MC00M2VjLTk3ZGItMTFjZGVmYWM5YzZhIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24"
+              alt=""
+            />
+            <h2 class="text-xl ml-20 sm:ml-44 sm:text-3xl">NDD</h2>
+          </div>
+        </a>
+        <a
+          href="https://app.powerbi.com/view?r=eyJrIjoiYTRlZGVkMWQtYzE3Yi00ZGIxLTk5ZWEtMDk1ZGQyNzY1NGQ5IiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24"
+              alt=""
+            />
+            <h2 class="text-xl ml-20 sm:ml-44 sm:text-3xl">Stock Increase</h2>
+          </div>
+        </a>
+        <a
+          href="https://app.powerbi.com/view?r=eyJrIjoiOWRlYWM2ZTItYzY4NS00MDg4LTgyOTgtYzVlYzgzODI4YTYxIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md"
+          >
+            <img
+              src="dashboard.avif"
+              class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24"
+              alt=""
+            />
+            <h2 class="text-xl ml-20 sm:ml-44 sm:text-3xl">
+              Stock Increase Groupwise
+            </h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <div
+      #parentDiv1
+      class="card w-[90vw] lg:w-[45vw] p-3 lg:h-auto bg-customgreen rounded-lg shadow-lg"
+    >
+      <!-- Parent Card Content -->
+      <div
+        class="w-full flex py-1 justify-evenly items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
+        (click)="toggleDropdown('offering')"
+      >
+        <img
+          src="valuedofferings.avif"
+          class="w-20 h-24 sm:w-40 scale-110 sm:h-36 lg:w-28 lg:h-24"
+          alt=""
+        />
+        <h1
+          class="text-3xl sm:text-5xl lg:text-3xl text-wrap ml-[50px] font-semibold text-white"
+        >
+          Our Valued Offerings
+        </h1>
+      </div>
+
+      <!-- Dropdown Content -->
+      <div *ngIf="showDropdown === 'offering'" class="mt-3 space-y-2">
+        <div
+          class="p-3 flex items-center justify-evenly bg-gray-100 rounded shadow-md"
+        >
+          <img
+            src="sims.avif"
+            class="w-24 h-20 sm:w-36 sm:h-28 lg:w-16 lg:h-16"
+            alt=""
+          />
+          <h2 class="text-xl sm:text-3xl">SIMS</h2>
+          <p-button
+            class="!ml-1"
+            icon="pi pi-eye"
+            aria-label="View"
+            severity="info"
+            [raised]="true"
+            (onClick)="openPDF()"
+          />
         </div>
-  
-        <!-- Dropdown Content -->
-        <div *ngIf="showDropdown === 'businessintellegence'" class="mt-3  space-y-2">
-          <a class="mb-2" href="https://app.powerbi.com/view?r=eyJrIjoiMzMzNGI5MGEtOGZjZC00MDNlLTgyYzMtOTI5ZDcwZDE0OTkyIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9" target="_blank" rel="noopener noreferrer">
-              <div class=" mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md">
-                  <img src="dashboard.png" class="w-16 h-16 sm:w-36 sm:h-28 lg:w-16 lg:h-16" alt="">
-                  <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">Benchmark</h2>
-              </div>
-          </a>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMzMzNGI5MGEtOGZjZC00MDNlLTgyYzMtOTI5ZDcwZDE0OTkyIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9" target="_blank" rel="noopener noreferrer">
-
-            <div class="p-3 mb-2 flex items-center justify-start bg-gray-100 rounded shadow-md">
-                <img src="dashboard.png" class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24" alt=""> 
-                <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">CCNI</h2>
-            </div>
-        </a>    
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMzMzNGI5MGEtOGZjZC00MDNlLTgyYzMtOTI5ZDcwZDE0OTkyIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9" target="_blank" rel="noopener noreferrer">
-
-              <div class="p-3 mb-2 flex items-center justify-start bg-gray-100 rounded shadow-md">
-                   <img src="dashboard.png" class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24" alt="">
-                   <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">PPNI</h2>
-              </div>
-          </a>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMzMzNGI5MGEtOGZjZC00MDNlLTgyYzMtOTI5ZDcwZDE0OTkyIiwidCI6ImNmOTQzOGZmLWE5ZDktNDk0OS05NTRlLWYzNmVkNDdjMjczOSJ9" target="_blank" rel="noopener noreferrer">
-
-              <div class="mb-2 p-3 flex items-center justify-start bg-gray-100 rounded shadow-md">
-                  <img src="dashboard.png" class="w-16 h-16 sm:w-36 sm:h-28 lg:w-24 lg:h-24" alt="">
-                  <h2 class="text-xl ml-20 sm:ml-44 sm:text-3xl">TOP vs SCS</h2>
-              </div>
-          </a>    
+        <div
+          class="p-3 flex items-center justify-evenly bg-gray-100 rounded shadow-md"
+        >
+          <img
+            src="sims.avif"
+            class="w-24 h-20 sm:w-36 sm:h-28 lg:w-16 lg:h-16"
+            alt=""
+          />
+          <h2 class="text-xl sm:text-3xl">GAINER</h2>
+          <p-button
+            class="!mr-2"
+            icon="pi pi-eye"
+            aria-label="View"
+            severity="info"
+            [raised]="true"
+            (onClick)="openPDF()"
+          />
+        </div>
+        <div
+          class="p-3 flex items-center justify-evenly bg-gray-100 rounded shadow-md"
+        >
+          <img
+            src="sims.avif"
+            class="w-24 h-20 sm:w-36 sm:h-28 lg:w-16 lg:h-16"
+            alt=""
+          />
+          <h2 class="text-xl sm:text-3xl">AUDIT</h2>
+          <p-button
+            icon="pi pi-eye"
+            aria-label="View"
+            severity="info"
+            [raised]="true"
+            (onClick)="openPDF()"
+          />
         </div>
       </div>
     </div>
-
-    <div class="flex justify-center">
-      <div
-        #parentDiv1
-        class="card w-[90vw] lg:w-[45vw] p-3 lg:h-auto bg-customgreen rounded-lg shadow-lg"
-      >
-        <!-- Parent Card Content -->
-        <div
-          class="w-full flex py-1 justify-evenly items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
-          (click)="toggleDropdown('offering')"
-        >
-          <img src="valuedofferings.png" class="w-20 h-24 sm:w-40 scale-110 sm:h-36 lg:w-28 lg:h-24" alt="">
-          <h1 class="text-3xl sm:text-5xl lg:text-3xl text-wrap ml-[50px] font-semibold text-white">Our Valued Offerings</h1>
-        </div>
-  
-        <!-- Dropdown Content -->
-        <div *ngIf="showDropdown === 'offering'" class="mt-3 space-y-2">
-          <div class="p-3 flex items-center justify-evenly bg-gray-100 rounded shadow-md">
-            <img src="sims.png" class="w-24 h-20 sm:w-36 sm:h-28 lg:w-16 lg:h-16" alt="">
-            <h2 class="text-xl sm:text-3xl">SIMS</h2>
-            <p-button class="!ml-1" icon="pi pi-eye" aria-label="View" severity="info" [raised]="true" (onClick)="openPDF()" />
-          </div>
-          <div class="p-3 flex items-center justify-evenly bg-gray-100 rounded shadow-md">
-            <img src="brands\triumph.png" class="w-24 h-20 sm:w-36 sm:h-28 lg:w-16 lg:h-16" alt="">
-            <h2 class="text-xl sm:text-3xl">GAINER</h2>
-            <p-button class="!mr-2" icon="pi pi-eye" aria-label="View" severity="info" [raised]="true" (onClick)="openPDF()" />
-          </div>
-          <div class="p-3 flex items-center justify-evenly bg-gray-100 rounded shadow-md">
-              <img src="brands\triumph.png" class="w-24 h-20 sm:w-36 sm:h-28 lg:w-16 lg:h-16" alt="">
-              <h2 class="text-xl sm:text-3xl">AUDIT</h2>
-              <p-button icon="pi pi-eye" aria-label="View" severity="info" [raised]="true" (onClick)="openPDF()"/>
-              
-          </div>
-                     
-        </div>
-      </div>
-    </div>
-
+  </div>
 </div>
 <router-outlet></router-outlet>

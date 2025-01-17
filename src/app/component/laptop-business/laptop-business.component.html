@@ -1,0 +1,90 @@
+<div class="w-[100vw] h-[100vh]">
+  <div class="w-[100vw] h-[100vh] overflow-x-hidden">
+    <div
+      class="w-[100vw] h-[100vh] background-img fixed -z-10"
+      style="background-image: url('background.svg'); background-size: cover"
+    ></div>
+    <div
+      class="w-[100vw] h-[8vh] sm:h-[10vh] lg:h-16 bg-customblue flex justify-center"
+    >
+      <img
+        src="1.png"
+        class="py-1 lg:py-1"
+        alt="sparecarelogo"
+        (click)="navigateToRoute()"
+      />
+    </div>
+
+    <p-tabs value="0">
+      <p-tablist class="!bg-transparent">
+        <p-tab value="0" class="!text-white">Our Valued Offerings</p-tab>
+        <p-tab value="1" class="!text-white">Our Valued Customers</p-tab>
+      </p-tablist>
+      <p-tabpanels class="!bg-transparent">
+        <p-tabpanel
+          value="0"
+          class="!flex !flex-row gap-10 flex-wrap items-center justify-center"
+        >
+          <div
+            class="w-[25vw] self-baseline h-[22vh] p-5 rounded-lg shadow-md overflow-hidden"
+            *ngFor="let item of data[0][brandName]"
+            [ngClass]="item.class"
+          >
+            <a [href]="item?.url" target="_blank">
+              <img
+                class="w-full h-32 object-cover"
+                src="dashboard.avif"
+                alt="Card Image"
+              />
+              <div class="p-3">
+                <h2 class="text-lg font-semibold text-gray-800">
+                  {{ item.text }}
+                </h2>
+              </div>
+            </a>
+          </div>
+        </p-tabpanel>
+        <p-tabpanel
+          value="1"
+          class="!flex !flex-row flex-wrap items-center justify-center"
+        >
+          <div class="flex justify-center">
+            <div
+              class="card w-[90vw] h-auto flex justify-center p-3 bg-gray-50 rounded-lg shadow-lg"
+            >
+              <p-table
+                [value]="topfivedata[0]"
+                [tableStyle]="{ 'min-width': '45rem' }"
+                class="bg-white w-full !rounded-lg border border-gray-200 shadow-md"
+              >
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th>North India</th>
+                    <th>East India</th>
+                    <th>Central India</th>
+                    <th>South India</th>
+                    <th>West India</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body">
+                  <tr *ngFor="let index of [0, 1, 2, 3, 4]">
+                    <!-- Iterating for 5 rows -->
+                    <td>{{ topfivedata[0]?.North[index]?.name || "" }}</td>
+                    <td>{{ topfivedata[0]?.East[index]?.name || "" }}</td>
+                    <td>{{ topfivedata[0]?.Central[index]?.name || "" }}</td>
+                    <td>{{ topfivedata[0]?.South[index]?.name || "" }}</td>
+                    <td>{{ topfivedata[0]?.West[index]?.name || "" }}</td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+
+          <p-button (click)="valueOffering(brandName)" label="brand wise dealer" />
+
+          
+        </p-tabpanel>
+      </p-tabpanels>
+    </p-tabs>
+  </div>
+</div>

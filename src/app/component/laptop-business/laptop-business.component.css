@@ -10,8 +10,3 @@
 :host ::ng-deep span.p-tablist-active-bar {
     height: 10px;
 }
-
-/* :host ::ng-deep .w-\[20vw\].flex.items-center.justify-evenly.flex-col.bg-.rounded-lg.shadow-md.scale-75.overflow-hidden {
-    background: white;
-    padding: 20px;
-} */

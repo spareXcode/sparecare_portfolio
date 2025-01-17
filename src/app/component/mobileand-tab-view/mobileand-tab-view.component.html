@@ -1,10 +1,11 @@
+<router-outlet></router-outlet>
 <div class="w-[100vw] h-[100vh] relative overflow">
+  <div class="w-[100vw] h-[100vh] background-img fixed -z-10" style="background-image: url('background.svg'); background-size: cover;">
+  </div>
     <div class="w-[100vw] h-[10vh] sm:h-[10vh] lg:h-16   bg-customblue flex justify-center">
         <img src="1.png" class="pb-2  sm:py-2 w-60 h-24 sm:h-28 text-white y-1 lg:py-1 " routerLink="/mobile" alt="sparecarelogo">
     </div>
     
-    <div class="w-[100vw] h-[100vh] background-img fixed -z-10" style="background-image: url('background.svg'); background-size: cover;">
-    </div>
 
     <div class="flex justify-center mt-11 flex-wrap gap-10">
         
@@ -18,7 +19,7 @@
                 class="w-full flex py-1 justify-evenly items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
                 (click)="toggleDropdown('fourWheeler')"
               >
-                <img src="fourwheeler.png" class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
+                <img src="fourwheeler.avif" class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
                 <h1 class="text-3xl sm:text-6xl lg:text-3xl font-semibold text-white">Four Wheeler</h1>
               </div>
         
@@ -33,7 +34,7 @@
                   class="w-16 h-16 sm:w-40 sm:h-36 lg:w-24 lg:h-24" 
                   [alt]="brand.name"
                 >
-                <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">{{ brand.name }}</h2>
+                <h2 class="text-xl ml-28 sm:ml-44 font-bold  sm:text-3xl">{{ brand.name }}</h2>
               </div>
                     
               </div>
@@ -50,7 +51,7 @@
               class="w-full flex py-1 justify-evenly items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
               (click)="toggleDropdown('twoWheeler')"
             >
-              <img src="twowheeler.png" class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
+              <img src="twowheeler.avif" class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
               <h1 class="text-3xl sm:text-6xl lg:text-3xl font-semibold text-white">Two Wheeler</h1>
             </div>
       
@@ -65,7 +66,7 @@
                   class="w-16 h-16 sm:ml-5 sm:w-36 sm:h-28 lg:w-16 lg:h-16" 
                   [alt]="brand.name"
                 >
-                <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">{{ brand.name }}</h2>
+                <h2 class="text-xl ml-28 sm:ml-44 font-bold sm:text-3xl">{{ brand.name }}</h2>
               </div>
                             
             </div>
@@ -81,7 +82,7 @@
             <div
               class="w-full flex py-1 justify-evenly items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
               (click)="toggleDropdown('commercial')"
-            > <img src="commercial.png" class="w-20 sm:ml-5 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
+            > <img src="commercial.avif" class="w-20 sm:ml-5 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
               <h1 class="text-3xl sm:text-6xl lg:text-3xl  font-semibold text-white">Commercial</h1>
             </div>
       
@@ -96,7 +97,7 @@
                   class="w-16 h-16 sm:ml-5 sm:w-36 sm:h-28 lg:w-16 lg:h-16" 
                   [alt]="brand.name"
                 >
-                <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">{{ brand.name }}</h2>
+                <h2 class="text-xl ml-28 sm:ml-44 font-bold sm:text-3xl">{{ brand.name }}</h2>
               </div>
             </div>
           </div>
@@ -111,7 +112,7 @@
             <div
               class="w-full flex py-1 justify-evenly items-center h-[12vh] lg:h-[120px] rounded bg-customgreen cursor-pointer"
               (click)="toggleDropdown('construction')"
-            > <img src="construction.png" class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
+            > <img src="construction.avif" class="w-20 h-20 sm:w-40 sm:h-36 lg:w-24 lg:h-24" alt="">
               <h1 class="text-3xl sm:text-6xl lg:text-3xl font-semibold text-white">Construction</h1>
             </div>
       
@@ -126,7 +127,7 @@
                   class="ml-5 w-16 h-16 sm:ml-5 sm:w-36 sm:h-28 lg:w-16 lg:h-16" 
                   [alt]="brand.name"
                 >
-                <h2 class="text-xl ml-28 sm:ml-44 sm:text-3xl">{{ brand.name }}</h2>
+                <h2 class="text-xl ml-28 sm:ml-44 font-bold sm:text-3xl">{{ brand.name }}</h2>
               </div>
                       
             </div>
@@ -134,4 +135,3 @@
         </div>
       </div>
 </div>
-<router-outlet></router-outlet>

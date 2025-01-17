@@ -17,7 +17,7 @@ export class BusinessIntelComponent {
     this.showDropdown = this.showDropdown === cardType ? null : cardType;
   }
   openPDF() {
-    const filePath =  'https://drive.google.com/file/d/1M8mcFTJcLOkFawLU1AA70WKZ2iE_FOgf/view?usp=sharing'; // Yaha aap apna correct path dekh lein
+    const filePath =  'https://scisportfolio150125.s3.us-east-1.amazonaws.com/Docker+and+k8.pdf'
     window.open(filePath, '_blank');
   }
 
